@@ -1,0 +1,252 @@
+@import './variables';
+@import './mixins';
+
+* {
+    @include format-document;
+}
+
+.main-nosotros {
+    @include main;
+
+    .titulos {
+        @include titulos-principales;
+
+        h1 {
+            @include titulos-principales-h1;
+        }
+
+    }
+
+    .contenedor-nosotros {
+        width: $width;
+        max-width: $max-width-2;
+        margin: auto;
+
+        .foto-local {
+            width: $width;
+            max-width: $max-width-2;
+        }
+
+        .textos-nosotros {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+            margin-top: -200px;
+
+            .texto-logo {
+                width: 30%;
+                padding: $padding-4;
+                margin-top: 70px;
+
+                h4:nth-child(1) {
+                    @include h4-nosotros;
+                    color: $primary-color-5;
+                }
+
+                h4:nth-child(2) {
+                    @include h4-nosotros;
+                    color: $primary-color;
+
+                }
+            }
+
+            .textos-descripcion {
+                margin-top: $margin-3;
+                margin-left: $margin-5;
+                width: $width-3;
+                max-width: $max-width-2;
+                text-align: right;
+                padding: $padding-4;
+
+                h2 {
+                    color: $primary-color;
+                    font-weight: bold;
+                    font-size: $font-size-9;
+                    text-shadow: 1px 1px 2px $primary-color-8;
+
+                }
+
+                h5 {
+                    color: $secondary-color-2;
+                    font-weight: bold;
+                    font-size: $font-size-4;
+                    text-align: left;
+                    text-shadow: 1px 1px 2px $primary-color-9;
+
+                }
+            }
+
+        }
+
+        .fotos-local {
+            margin: $margin-9 auto;
+            width: $width;
+            max-width: $max-width-3;
+
+            img {
+                width: $width;
+                max-width: $max-width-3;
+                object-fit: cover;
+                z-index: 1;
+            }
+        }
+
+    }
+
+}
+
+@media screen and (max-width:1024px) {
+
+    .main-nosotros {
+
+        .contenedor-nosotros {
+
+            .textos-nosotros {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                z-index: 2;
+                margin-top: -180px;
+
+                .texto-logo {
+                    width: 30%;
+                    padding: $padding-4;
+
+                    h4:nth-child(1) {
+                        @include h4-nosotros-1024px;
+                    }
+
+                    h4:nth-child(2) {
+                        @include h4-nosotros-1024px;
+
+                    }
+                }
+
+                .textos-descripcion {
+                    margin-top: $margin-3;
+                    margin-left: $margin-5;
+                    width: $width-1;
+                    max-width: $max-width-2;
+                    text-align: right;
+                    padding: $padding-4;
+
+                    h2 {
+                        font-size: $font-size-5;
+                    }
+
+                    h5 {
+                        font-size: $font-size-4;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:768px) {
+    .main-nosotros {
+
+        .contenedor-nosotros {
+
+            .textos-nosotros {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                z-index: 2;
+                margin-top: -150px;
+
+                .texto-logo {
+                    width: 30%;
+                    padding: $padding-4;
+                    margin-top: $margin-6;
+
+                    h4:nth-child(1) {
+                        @include h4-nosotros-1024px;
+
+                    }
+
+                    h4:nth-child(2) {
+                        @include h4-nosotros-1024px;
+
+                    }
+                }
+
+                .textos-descripcion {
+                    margin-top: $margin-3;
+
+                    h2 {
+                        font-size: $font-size-4;
+                    }
+
+                    h5 {
+                        font-size: $font-size-1;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width:430px) {
+    .main-nosotros {
+
+        .contenedor-nosotros {
+
+            .textos-nosotros {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                z-index: 2;
+                margin-top: -150px;
+
+                .texto-logo {
+
+                    h4:nth-child(1) {
+                        @include h4-nosotros-430px;
+
+                    }
+
+                    h4:nth-child(2) {
+                        @include h4-nosotros-430px;
+
+                    }
+                }
+
+                .textos-descripcion {
+
+                    h2 {
+                        font-size: $font-size-1;
+                    }
+
+                    h5 {
+                        font-size: $font-size;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:330px) {
+    .main-nosotros {
+
+        .contenedor-nosotros {
+
+            .textos-nosotros {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                z-index: 2;
+                margin-top: -180px;
+            }
+        }
+    }
+}

@@ -1,0 +1,254 @@
+@import './variables';
+@import './mixins';
+
+* {
+    @include format-document;
+}
+
+.main-productos {
+    @include main;
+
+    .titulos {
+        @include titulos-principales;
+
+        h1 {
+            @include titulos-principales-h1;
+
+        }
+    }
+
+
+    .boton-navegacion {
+        width: $width;
+        max-width: $max-width-2;
+        text-align: right;
+        z-index: 999;
+
+        select {
+            width: $width-11;
+            max-width: $max-width-10;
+            text-align: left;
+            height: 30px;
+            text-decoration: underline;
+            font-size: $font-size-5;
+            text-transform: uppercase;
+            font-weight: 50;
+            z-index: 999;
+        }
+    }
+
+    .contenedor-productos {
+        margin-top: 70px;
+
+        .titulo-producto-oferta {
+            color: $secondary-color-5;
+            @include titulos-productos-desktop;
+
+        }
+
+        .container-cards {
+            width: 100%;
+            border: hidden;
+            display: flex;
+            justify-content: center;
+
+            .card {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                width: 100%;
+                max-width: 1700px;
+                height: 100%;
+                padding: 1rem;
+                background: none;
+                border: none;
+
+                .tarjeta-contenido {
+                    width: 30%;
+                    max-width: 250px;
+                    height: 400px;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    margin: 25px;
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+                    box-shadow: 0 0 10px #000;
+                    border-radius: 5px;
+
+                    .imagen {
+                        display: flex;
+                        justify-content: center;
+                        width: 100%;
+                        background-color: #fafafa;
+                        padding: 15px;
+
+                        img {
+                            width: 100%;
+                            height: 200px;
+                        }
+                    }
+
+                    h2 {
+                        background-color: #dad5d5;
+                        width: 100%;
+                        text-align: center;
+                        font-family: sans-serif;
+                        text-transform: uppercase;
+                        margin-top: 5px;
+                        margin-bottom: 1px;
+                        color: #0a0a0a;
+                        font-size: 15px;
+                        display: flex;
+                        flex-direction: column;
+                        font-weight: bold;
+                    }
+
+                    .seccion2 {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+
+                        p {
+                            background-color: #080908;
+                            width: 100%;
+                            text-align: center;
+                            font-family: sans-serif;
+                            font-size: 15px;
+                            font-weight: 700;
+                            color: #fafafa;
+                        }
+
+                        button {
+                            margin-top: 5px;
+                            margin-bottom: 5px;
+                            padding: 10px;
+                            width: 80%;
+                            text-transform: uppercase;
+                            background-color: rgb(36, 8, 216);
+                            color: #fff;
+                            font-weight: 700;
+                            border: hidden;
+                            border-radius: 5px;
+                            cursor: pointer;
+                        }
+
+                        button:hover {
+                            background-color: rgb(66, 46, 196);
+                            color: #fff;
+                        }
+                    }
+
+                }
+            }
+
+            .tarjeta-contenido:hover {
+                transform: scale(1.1);
+                transition: 1s;
+
+
+            }
+        }
+
+        .linea {
+            margin-top: 70px;
+
+            hr {
+                @include linea-hr;
+            }
+        }
+
+    }
+
+}
+
+
+@media screen and (max-width:768px) {
+    .main-productos {
+
+        .boton-navegacion {
+
+            select {
+                width: $width-11;
+                max-width: $max-width-10;
+                font-size: $font-size-4;
+            }
+        }
+
+        .contenedor-productos {
+
+            .titulo-producto-oferta {
+                @include titulos-productos-tablet;
+            }
+
+
+            .container-cards {
+                width: 100%;
+                border: hidden;
+                display: flex;
+
+                .card {
+
+                    .tarjeta-contenido {
+                        width: 50%;
+                        max-width: 250px;
+                        min-width: 250px;
+                        height: 400px;
+                        margin: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:500px) {
+    .main-productos {
+        width: 100%;
+
+        .boton-navegacion {
+
+            select {
+                width: $width-7;
+                max-width: $max-width-8;
+                font-size: $font-size-2;
+            }
+        }
+
+        .contenedor-productos {
+
+            .titulo-producto-oferta {
+                @include titulos-productos-celular;
+            }
+
+            .container-cards {
+                .card {
+                    width: 100%;
+
+                    .tarjeta-contenido {
+                        width: 50%;
+                        min-width: 220px;
+
+                        .imagen {
+                            display: flex;
+                            justify-content: center;
+                            width: 100%;
+                            background-color: #fafafa;
+                            padding: 15px;
+
+                            img {
+                                width: 100%;
+                                height: 200px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

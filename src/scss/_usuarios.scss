@@ -1,0 +1,332 @@
+@import './variables';
+@import './mixins';
+
+* {
+    @include format-document;
+}
+
+.main-usuarios {
+    @include main;
+
+
+    .titulos {
+        @include titulos-principales;
+
+        h1 {
+            @include titulos-principales-h1;
+
+        }
+    }
+
+
+    .contenedor-usuarios {
+        margin: 70px auto;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+
+        .usuario-registrado {
+            @include usuarios;
+
+            form {
+
+                .olvido-contraseña {
+                    width: $width;
+                    text-align: right;
+                }
+
+                .boton-ingreso {
+                    width: $width;
+                    margin-top: $margin-3;
+
+                    button {
+                        width: $width-11;
+                        background-color: $secondary-color-8;
+                        color: $secondary-color-4;
+                        text-transform: uppercase;
+                        font-size: $font-size-3;
+                        font-weight: bold;
+                        border: 1px solid $secondary-color-9;
+                        border-radius: 5px;
+                    }
+
+                    button:hover {
+                        background-color: $secondary-color-12;
+                    }
+                }
+
+
+                .icono-usuarios {
+                    position: relative;
+                    width: 25px;
+                    margin-top: -100px;
+                    padding-left: $padding-3;
+                }
+
+                .form-floating label {
+                    padding: 1rem 2rem;
+                }
+
+                .redes-contacto {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    padding: $padding-3;
+                    margin-top: $margin-19;
+
+                    .ingreso-facebook {
+                        @include ingreso-facebook-google;
+                        background-color: $secondary-color-13;
+
+
+                        button {
+                            @include button-facebook-google;
+                            color: $secondary-color;
+
+                        }
+
+                        .icon-facebook {
+                            color: $secondary-color;
+                            margin: auto;
+                        }
+                    }
+
+                    .ingreso-facebook:hover {
+                        background-color: $secondary-color-12;
+                    }
+
+
+                    .ingreso-google {
+                        @include ingreso-facebook-google;
+                        background-color: $secondary-color-14;
+
+
+                        button {
+                            @include button-facebook-google;
+                            color: $secondary-color;
+                        }
+
+                        .icon-google {
+                            color: $secondary-color;
+                            margin: auto;
+                        }
+                    }
+
+                    .ingreso-google:hover {
+                        background-color: $secondary-color-15;
+                    }
+
+                }
+
+            }
+
+        }
+
+
+        .linea-divisoria {
+            background-color: $primary-color-3;
+            margin-top: $margin-7;
+            height: 500px;
+            width: 1px;
+        }
+
+        .usuario-nuevo {
+            @include usuarios;
+
+            form {
+
+                .nuevo-usuario {
+
+                    label {
+                        font-weight: bold;
+                        margin: $margin-1 auto;
+                    }
+
+                    input {
+                        width: $width;
+                        margin: $margin-1 auto;
+                        border-radius: 5px;
+                        height: 40px;
+                        padding-left: $padding-3;
+
+                    }
+
+                }
+
+
+                .contenedor-fecha {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    margin-top: $margin-4 auto;
+
+                    .titulo-fecha {
+                        width: $width;
+                        text-align: center;
+                        display: flex;
+                        flex-direction: column;
+                        font-weight: bold;
+                    }
+
+                    input {
+                        margin: $margin-3 auto;
+                        width: $width;
+                        text-align: center;
+                        font-size: large;
+                        letter-spacing: 5px;
+                        font-weight: center;
+                        border-radius: 5px;
+                    }
+                }
+
+
+                .contenedor-sexo {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    margin-top: $margin-4 auto;
+                    width: $width;
+                    text-align: center;
+                    font-size: large;
+                    letter-spacing: 5px;
+                    font-weight: center;
+
+                    label {
+                        width: $width;
+                        text-align: center;
+                        font-size: $font-size-4;
+                    }
+
+                    select {
+                        width: $width;
+                        text-align: center;
+                    }
+                }
+
+
+                .politicas-usuario {
+                    margin-top: $margin-3;
+                    width: $width;
+
+                    h6 {
+                        font-size: $font-size-1;
+                    }
+                }
+
+
+                .boton-ingreso-nuevo {
+                    width: $width;
+                    margin-top: $margin-3;
+                    padding: $padding-1;
+
+                    button {
+                        width: $width-11;
+                        background-color: $secondary-color-16;
+                        color: $secondary-color-3;
+                        text-transform: uppercase;
+                        font-size: $font-size-3;
+                        font-weight: bold;
+                        border-radius: 5px;
+                        background-color: $secondary-color-2;
+                        color: $secondary-color;
+                        border: $primary-color-6;
+                    }
+
+                    button:hover {
+                        border: 1px solid $secondary-color-2;
+                        background-color: $secondary-color-16;
+                        color: $secondary-color;
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .main-usuarios {
+
+        .contenedor-usuarios {
+            margin: 70px auto;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+            .usuario-registrado {
+                @include usuarios-768px;
+                margin: $margin-1 auto;
+            }
+
+            .linea-divisoria {
+                height: 2px;
+                width: 200px;
+                margin: auto;
+                margin-top: $margin-4;
+            }
+
+            .usuario-nuevo {
+                @include usuarios-768px;
+                margin: $margin-6 auto;
+            }
+
+            .redes-contacto {
+                margin-top: $margin-1;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:360px) {
+
+
+    .main-usuarios {
+
+        .contenedor-usuarios {
+
+
+            .usuario-registrado {
+
+                .ingreso-facebook {
+
+                    .icon-facebook {
+                        margin: auto;
+                        width: 12px;
+
+                        button {
+                            font-size: $font-size;
+                            margin: auto;
+                        }
+                    }
+
+                }
+
+                .ingreso-google {
+
+                    .icon-google {
+                        margin: auto;
+                        width: 12px;
+                    }
+
+                    button {
+                        font-size: $font-size;
+                        margin: auto;
+                        text-transform: uppercase;
+                    }
+                }
+
+            }
+
+            .usuario-nuevo {
+
+                .boton-ingreso-nuevo button {
+                    font-size: $font-size-2;
+                    font-weight: bold;
+                }
+            }
+
+        }
+    }
+}

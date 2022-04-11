@@ -1,0 +1,754 @@
+@import './variables';
+@import './mixins';
+
+* {
+    @include format-document;
+}
+
+.main-contacto {
+    @include main;
+
+
+
+    .titulos {
+        @include titulos-principales;
+
+        h1 {
+            @include titulos-principales-h1;
+        }
+
+    }
+
+
+    .container-contacto {
+        width: $width-1;
+        margin: auto;
+        max-width: $max-width-3;
+
+
+        .ubicacion-contacto {
+            width: $width;
+            margin: auto;
+            max-width: $max-width-6;
+
+            iframe {
+                width: $width;
+                height: 250px;
+                margin-top: $margin-4;
+                box-shadow: 2px 5px 10px 5px $secondary-color-16;
+
+            }
+        }
+
+
+        .contenedor-contacto {
+            width: $width;
+            margin: $margin-5 auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .parrafos {
+                width: $width;
+                padding: $padding-3;
+                font-size: $font-size-5;
+                margin: 0px auto;
+                display: flex;
+                flex-direction: column;
+                font-family: $font-primary-2;
+
+                .p1 {
+                    margin-top: $margin-2;
+                    font-size: $font-size-9;
+                }
+
+                .p2 {
+                    margin-top: $margin-3;
+                    font-size: $font-size-13;
+                }
+
+                .p4 {
+                    width: $width;
+                    margin-top: $margin-1;
+                    font-size: $font-size-9;
+                    font-style: italic;
+                    font-weight: bold;
+                    text-align: right;
+                    font-family: $font-primary-1;
+                    display: flex;
+                    flex-direction: column;
+
+                    span {
+                        text-align: right;
+                        margin-left: $margin-19;
+                        color: $secondary-color-14;
+                    }
+                }
+
+            }
+
+
+            .sucursal-info {
+                width: $width-9;
+                display: flex;
+                flex-direction: column;
+                padding: $padding-4;
+
+                .info {
+                    @include info-cv-contacto;
+                    margin: $margin-19 auto;
+
+                    h5 {
+                        text-align: left;
+                        width: $width;
+                        font-size: $font-size-6;
+                        font-weight: bold;
+                        margin: $margin-1 auto;
+                    }
+
+                    h3 {
+                        width: $width;
+                        font-size: $font-size-4;
+                        margin: $margin auto;
+                    }
+
+                    h4 {
+                        width: $width;
+                        font-size: $font-size-4;
+                        justify-content: left;
+                        margin: $margin-1 auto;
+                    }
+                }
+
+
+                .cv {
+                    @include info-cv-contacto;
+                    margin: auto;
+
+                    h3 {
+                        font-weight: bold;
+                        text-align: left;
+                        width: $width;
+                    }
+
+                    p {
+                        width: $width;
+                        font-size: $font-size-4;
+                        margin: $margin-1 auto;
+                    }
+                }
+
+            }
+
+
+            .contacto-section {
+                width: $width-9;
+                margin: auto;
+                display: flex;
+                justify-content: center;
+
+                form {
+                    width: $width;
+                    padding: $padding-5;
+                    color: $secondary-color;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    text-align: center;
+                    background: linear-gradient($secondary-color-17, $secondary-color-18, $secondary-color-19, $secondary-color-20);
+                    font-family: sans-serif;
+                    text-transform: uppercase;
+                    box-shadow: 2px 5px 10px 5px $secondary-color-16;
+
+
+                    .inputs-texts {
+                        margin: $margin-1 auto;
+                        width: 40%;
+                        font-size: $font-size-4;
+                        font-weight: bold;
+
+                        input {
+                            width: $width;
+                            height: 30px;
+                        }
+                    }
+
+
+                    .inputs-select-radio {
+                        display: flex;
+                        flex-direction: column;
+                        margin: $margin-1 auto;
+                        width: 40%;
+                        font-size: $font-size-4;
+                        font-weight: bold;
+
+                        select {
+                            height: 30px;
+                            cursor: pointer;
+                        }
+                    }
+
+                    .comentario {
+                        display: flex;
+                        flex-direction: column;
+                        margin: 0px auto;
+                        width: 90%;
+                        font-size: $font-size-4;
+                        font-weight: bold;
+
+                        textarea {
+                            height: 200px;
+                            width: $width;
+                            resize: none;
+                        }
+                    }
+
+
+                    .terminos {
+                        margin: $margin-1 auto;
+                        width: $width;
+                        font-size: $font-size-4;
+
+                        input {
+                            cursor: pointer;
+                        }
+                    }
+
+
+                    .button {
+                        margin: $margin-1 auto;
+                        display: flex;
+
+                        button {
+                            background-color: #edde9c;
+                            border: hidden;
+                            text-align: center;
+                            font-size: $font-size-3;
+                            color: #444444;
+                            padding: $padding-1;
+                            cursor: pointer;
+                            margin: $margin-1;
+                            border-radius: 10px;
+                            text-transform: uppercase;
+                            font-weight: bold;
+                        }
+
+                        button:hover {
+                            background-color: $secondary-color-9;
+                            border: $margin solid $secondary-color-9;
+                            cursor: pointer;
+                            color: $secondary-color;
+                            text-shadow: none;
+                        }
+                    }
+
+                    .contenedor-load {
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        display: none;
+
+                        .lds-ripple {
+                            display: inline-block;
+                            position: relative;
+                            width: 80px;
+                            height: 80px;
+
+                            div {
+                                position: absolute;
+                                border: 4px solid #fff;
+                                opacity: 1;
+                                border-radius: 50%;
+                                animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+
+                                div:nth-child(2) {
+                                    animation-delay: -0.5s;
+                                }
+                            }
+
+
+                            @keyframes lds-ripple {
+                                0% {
+                                    top: 36px;
+                                    left: 36px;
+                                    width: 0;
+                                    height: 0;
+                                    opacity: 1;
+                                }
+
+                                100% {
+                                    top: 0px;
+                                    left: 0px;
+                                    width: 72px;
+                                    height: 72px;
+                                    opacity: 0;
+                                }
+                            }
+                        }
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+
+@media screen and (max-width:1024px) {
+
+    .main-contacto {
+        @include main;
+
+        .container-contacto {
+            margin: auto;
+            width: $width;
+
+            .contenedor-contacto {
+                width: $width;
+                margin: auto;
+
+                .sucursal-info {
+                    width: $width;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    margin: $margin-1;
+                    padding: $padding-1;
+
+                    .info {
+                        width: $width;
+                        display: flex;
+                        justify-content: center;
+                        text-align: center;
+                        margin: $margin-1 auto;
+
+                        h5 {
+                            width: $width;
+                            text-align: center;
+                            font-size: $font-size-6;
+                            margin: auto;
+                        }
+
+                        h3 {
+                            width: $width;
+                            font-size: $font-size-4;
+                            margin: auto;
+                            text-align: center;
+                        }
+
+                        h4 {
+                            width: $width;
+                            text-align: center;
+                            font-size: $font-size-4;
+                            margin: auto;
+                        }
+                    }
+
+                    .cv {
+                        width: $width-9;
+                        margin: $margin-1;
+
+                        h3 {
+                            width: $width;
+                            text-align: center;
+                        }
+
+                        p {
+                            width: $width;
+                            font-size: $font-size-5;
+                            margin: $margin-1 auto;
+                            text-align: center;
+                        }
+                    }
+
+                }
+
+                .contacto-section {
+                    width: $width-3;
+                    max-width: 500px;
+                    margin: auto;
+                    display: flex;
+                    justify-content: center;
+
+                    form {
+                        width: $width;
+                        margin: auto;
+
+                        .terminos {
+                            margin: $margin-1 auto;
+                            width: $width;
+
+                            input {
+                                cursor: pointer;
+                            }
+                        }
+
+                        .button {
+                            width: $width-3;
+                            margin: $margin-1 auto;
+                            display: flex;
+
+                            button {
+                                width: $width-3;
+                                text-align: center;
+                                font-size: $font-size-14;
+                                padding: $padding-1;
+                                cursor: pointer;
+                                margin: $margin-1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .main-contacto {
+
+        .container-contacto {
+
+
+            .contenedor-contacto {
+                .contacto-section {
+                    width: $width;
+                    margin: auto;
+
+                    form {
+                        width: $width;
+                        padding: $padding-5;
+                        display: flex;
+                        flex-direction: row;
+                        text-align: center;
+
+                        .comentario {
+                            display: flex;
+                            flex-direction: column;
+                            margin: 0px auto;
+                            width: 90%;
+                            font-size: $font-size-5;
+
+                            textarea {
+                                height: 100px;
+                                width: $width;
+                            }
+                        }
+
+
+                        .terminos {
+                            margin: $margin-1 auto;
+                            width: $width;
+                            font-size: $font-size-1;
+
+                            input {
+                                cursor: pointer;
+                            }
+                        }
+
+
+                        .button {
+                            width: $width;
+                            margin: $margin-1 auto;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-around;
+
+                            button {
+                                width: $width;
+                                text-align: center;
+                                font-size: $font-size-4;
+                                padding: $padding-1;
+                                margin: $margin-1;
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+
+    .main-contacto {
+
+        .container-contacto {
+
+
+            .contenedor-contacto {
+
+
+                .ubicacion-contacto {
+
+                    iframe {
+                        width: $width;
+                        height: 200px;
+                        margin-top: $margin-4;
+                    }
+                }
+
+                .sucursal-info {
+                    width: $width;
+                    display: flex;
+                    flex-direction: column;
+                    padding: $padding-4;
+
+                    .info {
+                        @include info-cv-contacto;
+                        margin: auto;
+
+                        h5 {
+                            text-align: center;
+                            width: $width;
+                            font-size: $font-size-7;
+                            font-weight: bold;
+                            margin: $margin-1 auto;
+                        }
+
+                        h3 {
+                            width: $width;
+                            font-size: $font-size-5;
+                            margin: $margin-1 auto;
+                        }
+
+                        h4 {
+                            width: $width;
+                            font-size: $font-size-4;
+                            margin: $margin-1 auto;
+                        }
+                    }
+
+
+                    .cv {
+                        @include info-cv-contacto;
+                        margin: auto;
+
+
+                        h3 {
+                            width: $width;
+                            text-align: center;
+                        }
+
+                        p {
+                            width: $width;
+                            font-size: $font-size-5;
+                            margin: $margin-1 auto;
+                        }
+                    }
+                }
+
+                .contacto-section {
+                    width: $width;
+                    margin: auto;
+                    display: flex;
+                    justify-content: center;
+
+                    form {
+                        width: $width;
+
+
+                        .inputs-texts {
+                            margin: $margin-1 auto;
+                            width: $width;
+                            font-size: $font-size-4;
+
+                            input {
+                                width: $width;
+                                height: 30px;
+                            }
+                        }
+
+
+                        .inputs-select-radio {
+                            display: flex;
+                            flex-direction: column;
+                            margin: $margin-1 auto;
+                            width: $width;
+
+
+                            select {
+                                height: 30px;
+                                cursor: pointer;
+                            }
+                        }
+
+                        .comentario {
+                            display: flex;
+                            flex-direction: column;
+                            margin: 0px auto;
+                            width: $width;
+                            font-size: $font-size-4;
+
+                            textarea {
+                                height: 150px;
+                                width: $width;
+                            }
+                        }
+
+
+                        .terminos {
+                            margin: $margin-1 auto;
+                            width: $width;
+                            font-size: $font-size-1;
+
+                            input {
+                                cursor: pointer;
+                            }
+                        }
+
+
+                        .button {
+                            width: $width;
+                            margin: $margin-1 auto;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-around;
+
+                            button {
+                                width: $width-7;
+                                margin: $margin-1;
+                                font-size: $font-size-2;
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:360px) {
+    .main-contacto {
+
+        .container-contacto {
+            .ubicacion-contacto {
+
+                iframe {
+                    width: $width;
+                    height: 150px;
+                    margin-top: $margin-4;
+                }
+            }
+
+            .contenedor-contacto {
+                width: $width;
+                margin: $margin-5 auto;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                .parrafos {
+                    width: $width;
+                    padding: $padding-7;
+                    margin: 0px auto;
+                    display: flex;
+                    flex-direction: column;
+
+                    .p1 {
+                        margin-top: $margin-2;
+                        font-size: $font-size-5;
+                    }
+
+                    .p2 {
+                        margin-top: $margin-3;
+                        font-size: $font-size-6;
+                    }
+
+                    .p4 {
+                        width: $width;
+                        margin-top: $margin-1;
+                        font-size: $font-size-6;
+
+
+                        span {
+                            margin-left: $margin-19;
+                        }
+                    }
+                }
+
+
+                .sucursal-info {
+                    width: $width;
+                    display: flex;
+                    flex-direction: column;
+                    padding: $padding-4;
+
+                    .info {
+                        @include info-cv-contacto;
+                        margin: auto;
+
+                        h5 {
+                            text-align: center;
+                            width: $width;
+                            font-size: $font-size-5;
+                            margin: $margin-1 auto;
+                        }
+
+                        h3 {
+                            width: $width;
+                            font-size: $font-size-4;
+                            margin: $margin-1 auto;
+                        }
+
+                        h4 {
+                            width: $width;
+                            font-size: $font-size-2;
+                            margin: $margin-1 auto;
+                        }
+                    }
+
+
+                    .cv {
+                        @include info-cv-contacto;
+                        margin: auto;
+
+
+                        h3 {
+                            width: $width;
+                            text-align: center;
+                        }
+
+                        p {
+                            width: $width;
+                            font-size: $font-size-4;
+                            margin: $margin-1 auto;
+                        }
+                    }
+
+                }
+
+                .contacto-section {
+
+                    form {
+
+                        .button {
+                            width: $width;
+                            margin: $margin-1 auto;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-around;
+
+                            button {
+                                width: 200px;
+                                margin: $margin-1;
+                                font-size: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
