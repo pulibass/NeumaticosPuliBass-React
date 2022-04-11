@@ -1,6 +1,4 @@
 import '../css/style.css';
-
-
 import iconoInstagram from '../img/logos/instagram.png';
 import iconoFacebook from '../img/logos/facebook.png';
 import iconoTwitter from '../img/logos/gorjeo.png';

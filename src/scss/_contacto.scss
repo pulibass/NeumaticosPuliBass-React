@@ -98,12 +98,13 @@
                 .info {
                     @include info-cv-contacto;
                     margin: $margin-19 auto;
+                    font-family: $font-primary-2;
 
                     h5 {
                         text-align: left;
                         width: $width;
                         font-size: $font-size-6;
-                        font-weight: bold;
+                        font-weight: 600;
                         margin: $margin-1 auto;
                     }
 
@@ -111,6 +112,7 @@
                         width: $width;
                         font-size: $font-size-4;
                         margin: $margin auto;
+                        font-weight: 600;
                     }
 
                     h4 {
@@ -118,6 +120,7 @@
                         font-size: $font-size-4;
                         justify-content: left;
                         margin: $margin-1 auto;
+                        font-weight: 600;
                     }
                 }
 
@@ -125,6 +128,8 @@
                 .cv {
                     @include info-cv-contacto;
                     margin: auto;
+                    font-family: $font-primary-2;
+                    font-weight: 600;
 
                     h3 {
                         font-weight: bold;

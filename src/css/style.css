@@ -31,7 +31,6 @@
 /*width*/
 /*max-width*/
 /*margin*/
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -1369,24 +1368,27 @@ header label {
   justify-self: center;
   align-self: center;
   margin: 100px auto;
+  font-family: "Bebas Neue", cursive;
 }
 .main-contacto .container-contacto .contenedor-contacto .sucursal-info .info h5 {
   text-align: left;
   width: 100%;
   font-size: 25px;
-  font-weight: bold;
+  font-weight: 600;
   margin: 5px auto;
 }
 .main-contacto .container-contacto .contenedor-contacto .sucursal-info .info h3 {
   width: 100%;
   font-size: 15px;
   margin: 2px auto;
+  font-weight: 600;
 }
 .main-contacto .container-contacto .contenedor-contacto .sucursal-info .info h4 {
   width: 100%;
   font-size: 15px;
   justify-content: left;
   margin: 5px auto;
+  font-weight: 600;
 }
 .main-contacto .container-contacto .contenedor-contacto .sucursal-info .cv {
   width: 100%;
@@ -1395,6 +1397,8 @@ header label {
   justify-self: center;
   align-self: center;
   margin: auto;
+  font-family: "Bebas Neue", cursive;
+  font-weight: 600;
 }
 .main-contacto .container-contacto .contenedor-contacto .sucursal-info .cv h3 {
   font-weight: bold;
@@ -2752,7 +2756,7 @@ footer .container-footer .logos-autos .marcas-autos img {
 footer .container-footer .logos-autos h5 {
   margin: auto;
   text-align: center;
-  font-family: "Roboto", sans-serif;
+  font-family: "Bebas Neue", cursive;
   font-weight: bold;
 }
 

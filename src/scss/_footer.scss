@@ -1,6 +1,5 @@
 @import './variables';
 @import './mixins';
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
 
 * {
@@ -180,7 +179,7 @@ footer {
             h5 {
                 margin: auto;
                 text-align: center;
-                font-family: 'Roboto', sans-serif;
+                font-family: $font-primary-2;
                 font-weight: bold;
 
             }
