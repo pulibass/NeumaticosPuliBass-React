@@ -1,7 +1,5 @@
-import axios from 'axios';
 import React from 'react';
 import '../css/style.css';
-
 import data from '../Componentes/productos.json';
 
 export default class Productos extends React.Component {
@@ -33,20 +31,12 @@ export default class Productos extends React.Component {
         } */
 
     render() {
-        return (<div>
-            {/* <ul>
+        return (
 
-                {this.state.neumaticos.map((element) => <li key={element.id}> {element.title}  </li>)}
 
-                   <li> Nombre {this.state.neumaticos[0].nombre}   </li>
-                <li> Modelo {this.state.neumaticos[0].modelo}   </li>
-                <li> Precio {this.state.neumaticos[0].precio}   </li> 
-        </ul> */}
+
             <main className="main-productos">
-
-
-                {/* <section data-aos="flip-left" classNameName="titulos">
-
+                <section data-aos="flip-left" className="titulos">
                     <div>
                         <h4>/PRODUCTOS</h4>
                         <h1>NUESTROS PRODUCTOS</h1>
@@ -58,28 +48,28 @@ export default class Productos extends React.Component {
                             <option value="oferta">OFERTAS</option>
                         </select>
                     </div>
-                </section> */}
-
+                </section>
 
                 <section data-aos="fade-up" data-aos-anchor-placement="top-bottom" className="contenedor-productos">
-
-                    {/*    <a id="cubiertas"></a>
+                    <a id="cubiertas"></a>
                     <div id="titulosProductos">
                     </div>
 
                     <div className="container-cards">
-
                         <div className="card" id="card">
-                            <div className="imagen"><img id="img-producto" src="{productosCard.img}" alt="" /></div>
-                            <h2 className="title-producto">{productosCard.title}<span>{productosCard.subTitle}</span></h2>
-                            <div className="seccion2">
-                                <p className="precio-producto"> $ {productosCard.price}</p>
-                                <button id="${productosCard.id}">Agregar</button>
-                            </div>
+                            {this.state.neumaticos.map((element) => <div className='tarjeta-contenido'>
+
+                                <div className="imagen"><img id="img-producto" src={element.img} alt="" /></div>
+                                <h2 className="title-producto">{element.title}<span>{element.subTitle}</span></h2>
+                                <div className="seccion2">
+                                    <p className="precio-producto">{element.price}</p>
+                                    <button id={element.id}>Agregar</button>
+                                </div>
+                            </div>)}
 
                         </div>
 
-                    </div> */}
+                    </div>
 
                     <div className="linea">
                         <hr />
@@ -93,7 +83,7 @@ export default class Productos extends React.Component {
             </main>
 
 
-        </div>);
+        );
     }
 
 
