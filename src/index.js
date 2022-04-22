@@ -10,6 +10,7 @@ import Contacto from './Componentes/contacto';
 import Usuarios from './Componentes/usuarios';
 import Cart from './Componentes/cart';
 import Footer from './Componentes/footer';
+import Productos from './Componentes/productos';
 
 
 import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
@@ -22,6 +23,7 @@ root.render(
         <Route path="/" element={<App />} />
         <Route index element={<App />} />
         <Route path="inicio" element={<Inicio />} />
+        <Route path="productos" element={<Productos />} />
         <Route path="nosotros" element={<Nosotros />} />
         <Route path="contacto" element={<Contacto />} />
         <Route path="usuarios" element={<Usuarios />} />
