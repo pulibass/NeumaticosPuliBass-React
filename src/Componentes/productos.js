@@ -6,13 +6,8 @@ export default class Productos extends React.Component {
 
     constructor(props) {
         super(props);
-
-
-
         this.state = {
             neumaticos: data
-
-
         }
     }
 
@@ -77,82 +72,10 @@ export default class Productos extends React.Component {
 
                 </section>
 
-
-
-
             </main>
-
-
         );
     }
-
-
-
 }
 
-/* export default function Productos() {
-
-
-    return (
-        <div>
-            <p>hola mundo</p>
-        </div>)
-
-
-}
- */
-
-
-
-
-/*  return (
-     <main classNameName="main-productos">
-
-
-         <section data-aos="flip-left" classNameName="titulos">
-
-             <div>
-                 <h4>/PRODUCTOS</h4>
-                 <h1>NUESTROS PRODUCTOS</h1>
-             </div>
-
-             <div classNameName="select-productos">
-                 <select onChange="cambioProductos()" name="" id="selectProducts">
-                     <option value="producto">PRODUCTOS</option>
-                     <option value="oferta">OFERTAS</option>
-                 </select>
-             </div>
-         </section>
-
-
-         <section data-aos="fade-up" data-aos-anchor-placement="top-bottom" classNameName="contenedor-productos">
-
-             <a id="cubiertas"></a>
-             <div id="titulosProductos">
-             </div>
-
-             <div classNameName="container-cards">
-
-                 <div classNameName="card" id="card">
-
-                 </div>
-
-             </div>
-
-             <div classNameName="linea">
-                 <hr />
-             </div>
-
-         </section>
-
-
-
-
-     </main>
- ) */
-
-/*  className Productos{
-
- } */
 
 
