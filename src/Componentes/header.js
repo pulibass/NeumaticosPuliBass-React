@@ -50,7 +50,7 @@ export default function Header() {
                 </ul>
             </nav>
             <div className="cart">
-                <Link to="/cart"><img className="img-iconos" src={cartIcon}
+                <Link to="/cart"><span className='countcart' id='countcart'>0</span><img className="img-iconos" src={cartIcon}
                     alt="icono-cart" /></Link>
             </div>
 

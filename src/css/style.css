@@ -119,6 +119,10 @@ header .cart {
 header .cart a {
   color: #f3f3f3;
 }
+header .cart a .countcart {
+  color: rgb(241, 30, 30);
+  font-weight: bold;
+}
 header .cart a img {
   margin-right: 5px;
   width: 24px;
